@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- multi-lingual support: filter values should match order of titles -->
+    <string-array name="filter_values">
+        <item>none</item>
+        <item>lighter</item>
+        <item>darker</item>
+        <item>contrast</item>
+        <item>saturate</item>
+        <item>desaturate</item>
+        <item>sharpen</item>
+        <!-- <item>blur</item> -->
+        <item>sepia</item>
+        <!-- <item>sketch</item> -->
+        <item>grayscale</item>
+    </string-array>
+
+    <string-array name="filter_titles">
+        <item>@string/filter_none</item>
+        <item>@string/filter_brightness_up</item>
+        <item>@string/filter_brightness_down</item>
+        <item>@string/filter_contrast</item>
+        <item>@string/filter_saturation</item>
+        <item>@string/filter_desaturation</item>
+        <item>@string/filter_sharpen</item>
+        <!-- <item>@string/filter_blur</item> -->
+        <item>@string/filter_sepia</item>
+        <!-- <item>@string/filter_sketch</item> -->
+        <item>@string/filter_grayscale</item>
+    </string-array>
+
+</resources>

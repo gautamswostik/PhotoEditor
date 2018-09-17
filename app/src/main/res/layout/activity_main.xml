@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.ActivityMain">
+
+    <ImageView
+        android:id="@+id/image_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/background_image" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            android:drawableStart="@drawable/icon_camera"
+            android:text="@string/btn_camera" />
+
+        <Button
+            android:id="@+id/button_gallery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            android:drawableStart="@drawable/icon_image_search"
+            android:text="@string/btn_gallery" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.pkprojects.photoeditor.utils.SameSpinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="16dp" />
+
+        <Button
+            android:id="@+id/button_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="16dp"
+            android:drawableStart="@drawable/icon_send"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/btn_share" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/loadingScreen"
+        style="@style/ProgressBackground">
+        <ProgressBar
+            style="@style/ProgressIndicator"/>
+    </RelativeLayout>
+
+</RelativeLayout>

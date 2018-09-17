@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="60dp"
+        android:right="60dp">
+        <bitmap
+            android:src="@drawable/launcher_hi_res_512"
+            android:gravity="center"
+            android:tileMode="disabled" >
+        </bitmap>
+    </item>
+</layer-list>
+

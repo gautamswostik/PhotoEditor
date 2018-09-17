@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="app_name">PS Photo Helper</string>
+
+    <string name="btn_camera">camera</string>
+    <string name="btn_gallery">gallery</string>
+    <string name="btn_share">share</string>
+
+    <string name="msg_noimage">You should select an image to work.</string>
+    <string name="msg_error_noimage">Something went wrong. Try another image.</string>
+    <string name="msg_error_noimagedata">Something went wrong with image data. Try another image.</string>
+    <string name="msg_nocamera">It look like your device does not have a camera. Use images from gallery, please.</string>
+    <string name="msg_mediacamera_required">Application requires camera and media access. Open Settings, Apps, Photo Editor, allow camera and media access.</string>
+    <string name="msg_job_timeout">Image processing timed out. Try different filter or smaller image.</string>
+    <string name="msg_select_image">You have to select image first.</string>
+
+    <string name="send_to">Send via</string>
+    <string name="send_subject">Look at my new photo!</string>
+    <string name="send_text">Created in PS Photo Editor\nhttps://play.google.com/store/apps/details?id=</string>
+
+    <string name="filter_none">original</string>
+    <string name="filter_brightness_up">lighter</string>
+    <string name="filter_brightness_down">darker</string>
+    <string name="filter_contrast">contrast</string>
+    <string name="filter_saturation">saturate</string>
+    <string name="filter_desaturation">desaturate</string>
+    <string name="filter_sharpen">sharpen</string>
+    <string name="filter_blur">blur</string>
+    <string name="filter_sepia">sepia</string>
+    <string name="filter_sketch">sketch</string>
+    <string name="filter_grayscale">grayscale</string>
+
+</resources>
