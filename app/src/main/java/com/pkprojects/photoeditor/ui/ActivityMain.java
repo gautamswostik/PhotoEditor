@@ -1,6 +1,7 @@
 package com.pkprojects.photoeditor.ui;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -177,7 +178,9 @@ public class ActivityMain extends AppCompatActivity implements MVPContract.View 
                 return true;
             }
         } else {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            if(!isCameraAvailable(this)) { // checking if camera is available at all
+                showToast(R.string.msg_nocamera);
+            } else if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, AppConfig.PERMISSION_CAMERA);
             } else {
                 return true;
@@ -207,7 +210,7 @@ public class ActivityMain extends AppCompatActivity implements MVPContract.View 
         if (cameraIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(cameraIntent, AppConfig.PERMISSION_CAMERA);
         } else {
-            showToast(R.string.msg_nocamera); // test
+            showToast(R.string.msg_nocamera);
         }
     }
 
@@ -286,6 +289,10 @@ public class ActivityMain extends AppCompatActivity implements MVPContract.View 
                 spinner.setSelection(position);
             }
         }, 100);
+    }
+
+    public static boolean isCameraAvailable(Context context) {
+        return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY);
     }
 
     private boolean showToast(int id) {
