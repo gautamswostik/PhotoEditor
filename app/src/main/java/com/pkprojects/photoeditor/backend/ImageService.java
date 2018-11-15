@@ -78,7 +78,7 @@ public class ImageService extends JobIntentService {
             try {
                 out = new FileOutputStream(AppConfig.IMAGE_CURRENT);
                 currentBitmap.compress(Bitmap.CompressFormat.JPEG, 85, out);
-            } catch (Exception e) {
+            } catch (IOException e) {
                 e.printStackTrace();
             } finally {
                 try {
