@@ -4,9 +4,9 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.util.Log;
 
-public class PresenterMain implements MVPContract.Presenter {
+public class MainPresenter implements MVPContract.Presenter {
 
-    private static final String TAG = PresenterMain.class.getSimpleName();
+    private static final String TAG = MainPresenter.class.getSimpleName();
 
     private MVPContract.View view;
     private MVPContract.Model model;
@@ -14,7 +14,7 @@ public class PresenterMain implements MVPContract.Presenter {
     private int lastFilter;
     private long jobStarted;
 
-    public PresenterMain(MVPContract.View view, MVPContract.Model model) {
+    public MainPresenter(MVPContract.View view, MVPContract.Model model) {
         this.view = view;
         this.model = model;
         this.model.setPresenter(this);

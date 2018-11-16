@@ -3,11 +3,11 @@ package com.pkprojects.photoeditor;
 import android.app.Application;
 import android.content.Context;
 
-import com.pkprojects.photoeditor.di.AppComponent;
-import com.pkprojects.photoeditor.di.AppModule;
-import com.pkprojects.photoeditor.di.ContextModule;
-import com.pkprojects.photoeditor.di.DaggerAppComponent;
-import com.pkprojects.photoeditor.di.ModelModule;
+import com.pkprojects.photoeditor.di.component.AppComponent;
+import com.pkprojects.photoeditor.di.component.DaggerAppComponent;
+import com.pkprojects.photoeditor.di.module.AppModule;
+import com.pkprojects.photoeditor.di.module.ContextModule;
+import com.pkprojects.photoeditor.di.module.ModelModule;
 
 public class AppBase extends Application {
 

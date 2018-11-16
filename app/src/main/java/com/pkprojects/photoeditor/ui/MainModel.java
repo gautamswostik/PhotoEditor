@@ -13,7 +13,6 @@ import android.os.Handler;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.pkprojects.photoeditor.AppBase;
 import com.pkprojects.photoeditor.AppConfig;
 import com.pkprojects.photoeditor.R;
 import com.pkprojects.photoeditor.backend.ImageService;
@@ -24,11 +23,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import javax.inject.Inject;
+public class MainModel implements MVPContract.Model {
 
-public class ModelMain implements MVPContract.Model {
-
-    private static final String TAG = ModelMain.class.getSimpleName();
+    private static final String TAG = MainModel.class.getSimpleName();
     private static final String LAST_FILTER = "last_filter";
     private static final String JOB_STARTED = "job_started";
 
@@ -51,8 +48,8 @@ public class ModelMain implements MVPContract.Model {
     private long jobStarted;
     private Handler timeoutHandler;
 
-    public ModelMain(Context context) {
-        this.context = context;
+    public MainModel(Context c) {
+        context = c;
         setUp();
     }
 

@@ -1,10 +1,13 @@
-package com.pkprojects.photoeditor.di;
+package com.pkprojects.photoeditor.di.component;
 
 import android.app.Application;
 import android.content.Context;
 
 import com.pkprojects.photoeditor.AppBase;
-import com.pkprojects.photoeditor.ui.ModelMain;
+import com.pkprojects.photoeditor.di.module.AppModule;
+import com.pkprojects.photoeditor.di.module.ContextModule;
+import com.pkprojects.photoeditor.di.module.ModelModule;
+import com.pkprojects.photoeditor.ui.MainModel;
 
 import javax.inject.Singleton;
 import dagger.Component;
@@ -17,7 +20,7 @@ public interface AppComponent {
 
     Context getContext();
 
-    ModelMain getInteractor();
+    MainModel getInteractor();
 
     Application getApplication();
 }

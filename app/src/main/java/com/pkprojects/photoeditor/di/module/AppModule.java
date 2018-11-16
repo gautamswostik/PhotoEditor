@@ -1,4 +1,4 @@
-package com.pkprojects.photoeditor.di;
+package com.pkprojects.photoeditor.di.module;
 
 import android.app.Application;
 

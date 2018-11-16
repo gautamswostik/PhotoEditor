@@ -1,8 +1,8 @@
-package com.pkprojects.photoeditor.di;
+package com.pkprojects.photoeditor.di.module;
 
 import android.content.Context;
 
-import com.pkprojects.photoeditor.ui.ModelMain;
+import com.pkprojects.photoeditor.ui.MainModel;
 
 import dagger.Module;
 import dagger.Provides;
@@ -17,7 +17,7 @@ public class ModelModule {
     }
 
     @Provides
-    public ModelMain provideModelClass() {
-        return new ModelMain(context);
+    public MainModel provideModelClass() {
+        return new MainModel(context);
     }
 }

@@ -1,12 +1,10 @@
 package com.pkprojects.photoeditor;
 
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
 import android.net.Uri;
 
 import com.pkprojects.photoeditor.ui.MVPContract;
-import com.pkprojects.photoeditor.ui.PresenterMain;
+import com.pkprojects.photoeditor.ui.MainPresenter;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -19,7 +17,7 @@ import static org.junit.Assert.*;
 
 public class MainPresenterTest {
 
-    private PresenterMain presenter;
+    private MainPresenter presenter;
 
     @Mock
     MVPContract.View view;
@@ -30,7 +28,7 @@ public class MainPresenterTest {
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);// required for the "@Mock" annotations
-        presenter = Mockito.spy(new PresenterMain(view, model));
+        presenter = Mockito.spy(new MainPresenter(view, model));
     }
 
     @Test

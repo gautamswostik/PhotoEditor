@@ -26,8 +26,8 @@ import com.pkprojects.photoeditor.AppBase;
 import com.pkprojects.photoeditor.AppConfig;
 import com.pkprojects.photoeditor.BuildConfig;
 import com.pkprojects.photoeditor.R;
-import com.pkprojects.photoeditor.di.DaggerActivityComponent;
-import com.pkprojects.photoeditor.di.MvpModule;
+import com.pkprojects.photoeditor.di.component.DaggerActivityComponent;
+import com.pkprojects.photoeditor.di.module.MvpModule;
 import com.pkprojects.photoeditor.utils.SameSpinner;
 
 import java.io.File;
@@ -40,9 +40,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ActivityMain extends AppCompatActivity implements MVPContract.View {
+public class MainActivity extends AppCompatActivity implements MVPContract.View {
 
-    private static final String TAG = ActivityMain.class.getSimpleName();
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @BindView(R.id.image_view)
     ImageView imageView;
@@ -69,7 +69,7 @@ public class ActivityMain extends AppCompatActivity implements MVPContract.View 
 
         ButterKnife.bind(this);
 
-        // presenter = new PresenterMain(this, new ModelMain(this)); // DI below
+        // presenter = new MainPresenter(this, new MainModel(this)); // DI below
 
         DaggerActivityComponent.builder()
                 .appComponent(AppBase.getApp(this).component())

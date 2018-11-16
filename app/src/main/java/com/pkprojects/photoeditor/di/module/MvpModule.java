@@ -1,10 +1,10 @@
-package com.pkprojects.photoeditor.di;
+package com.pkprojects.photoeditor.di.module;
 
 import android.content.Context;
 
 import com.pkprojects.photoeditor.ui.MVPContract;
-import com.pkprojects.photoeditor.ui.ModelMain;
-import com.pkprojects.photoeditor.ui.PresenterMain;
+import com.pkprojects.photoeditor.ui.MainModel;
+import com.pkprojects.photoeditor.ui.MainPresenter;
 
 import dagger.Module;
 import dagger.Provides;
@@ -25,11 +25,11 @@ public class MvpModule {
 
     @Provides
     public MVPContract.Model provideModel() {
-        return new ModelMain((Context) view);
+        return new MainModel((Context) view);
     }
 
     @Provides
-    public MVPContract.Presenter providePresenter(MVPContract.View view, ModelMain model) {
-        return new PresenterMain(view, model);
+    public MVPContract.Presenter providePresenter(MVPContract.View view, MainModel model) {
+        return new MainPresenter(view, model);
     }
 }
